@@ -6,7 +6,7 @@ The project explores a typology-aware multilingual machine translation approach 
 
 ## Contributions
 
-This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata - script type, language family, and basic linguistic statistics - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings directly from SMOL and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
+This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata and documented information - script type, language family, and basic linguistic statistics - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings built on SMOL dataset and documentation and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
 
 ## Methods
 
