@@ -42,12 +42,12 @@ Finally we will spend the last two weeks analyzing our results and writing the r
 
 We want to ensure that every member of the team has a hand in most areas, so that we get the most out of the course. However, to ensure that everything goes according to our rough timeline, we each hold responsibility to certain areas of work.
 
-* Preparing the metadeta and generating per-language features:
-* Fine tuning the model:
-* Running evaluation metrics with the fine-tuned models:
-* Aggregating and tabularizing results:
-* Analysis and discussion of results:
-* Report, repository, misc: 
+* Preparing the metadata and generating per-language features added to mBART: Malthe 
+* Fine tuning the model: Dominik
+* Running evaluation metrics with the fine-tuned models: Bora
+* Aggregating and tabularizing results: Malthe
+* Analysis and discussion of results: Dominik
+* Report, repository, misc: Bora
 
 
 # Appendix
