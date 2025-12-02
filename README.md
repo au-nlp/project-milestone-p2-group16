@@ -2,11 +2,11 @@
 
 ## Abstract
 
-The project explores a typology-aware multilingual machine translation approach using the SMOL dataset, which contains professionally translated text for 221 low-resource languages along with rich metadata, including script type, language family, and Glottocodes. The goal is to investigate whether integrating such metadata directly into a multilingual model can improve translation quality for underrepresented languages. Using mBART-50 as the base architecture, we construct a “typology embedding” for each language by combining a one-hot script vector, a family/region embedding, and simple corpus-derived indicators such as average sub-tokens per word and type-token ratio. These embeddings are added to the model’s language-ID representations during fine-tuning, enabling the model to learn script- and family-sensitive patterns. Evaluation using chrF++, spBLEU, and COMET metrics will determine whether these lightweight, in-dataset typological signals enhance cross-lingual transfer and overall translation performance in low-resource settings.
+The project explores a typology-aware multilingual machine translation approach using the SMOL dataset, which contains professionally translated text for 221 low-resource languages. The documentation provides rich information, including script type, language family, and Glottocodes, allowing us to implement language and script family emmbeddings. The goal is to investigate whether integrating such metadata directly into a multilingual model can improve translation quality for underrepresented languages. Using mBART-50 as the base architecture, we construct a “typology embedding” for each language by combining a one-hot script vector, a family/region embedding, and simple corpus-derived indicators such as average sub-tokens per word and type-token ratio. These embeddings are added to the model’s language-ID representations during fine-tuning, enabling the model to learn script- and family-sensitive patterns. Evaluation using chrF++, spBLEU, and COMET metrics will determine whether these lightweight, in-dataset typological signals enhance cross-lingual transfer and overall translation performance in low-resource settings.
 
 ## Contributions
 
-This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata - script type, language family, and basic linguistic statistics - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings directly from SMOL and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
+This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata and documented information - script type, language family, and basic linguistic statistics - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings built on SMOL dataset and documentation and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
 
 ## Methods
 
@@ -42,13 +42,12 @@ Finally we will spend the last two weeks analyzing our results and writing the r
 
 We want to ensure that every member of the team has a hand in most areas, so that we get the most out of the course. However, to ensure that everything goes according to our rough timeline, we each hold responsibility to certain areas of work.
 
-* Preparing the metadata and generating per-language features added to mBART: Malthe 
-* Fine tuning the model: Dominik
-* Running evaluation metrics with the fine-tuned models: Bora
-* Aggregating and tabularizing results: Malthe
-* Analysis and discussion of results: Dominik
-* Report, repository, misc: Bora
-
+- Preparing the metadata and generating per-language features added to mBART: Malthe
+- Fine tuning the model: Dominik
+- Running evaluation metrics with the fine-tuned models: Bora
+- Aggregating and tabularizing results: Malthe
+- Analysis and discussion of results: Dominik
+- Report, repository, misc: Bora
 
 # Appendix
 
