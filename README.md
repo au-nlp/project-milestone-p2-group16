@@ -38,16 +38,18 @@ We may begin the report if we complete our evaluations early. Should we find tha
 
 Finally we will spend the last two weeks analyzing our results and writing the report. We will focus on making a clear and concise report that displays the most significant results and observations from our evaluation data. We expect to have enough time to properly explore not just our results but where our findings could be taken in future research.
 
-## Organization within the team
+## Organization and responsibilities within the team
 
 We want to ensure that every member of the team has a hand in most areas, so that we get the most out of the course. However, to ensure that everything goes according to our rough timeline, we each hold responsibility to certain areas of work.
 
-- Preparing the metadata and generating per-language features added to mBART: Malthe
-- Fine tuning the model: Dominik
-- Running evaluation metrics with the fine-tuned models: Bora
-- Aggregating and tabularizing results: Malthe
-- Analysis and discussion of results: Dominik
-- Report, repository, misc: Bora
+- Literature research: Bora
+- Preparing the per language metadata: Dominik
+- Creating typology aware model: Dominik
+- Creating the fine-tuning loop: Malthe, Bora
+- Running evaluation metrics with the fine-tuned models: Malthe, Bora, Dominik
+- Analyzing, aggregating and tabularizing results: Malthe
+- Discussion of results: Dominik, Malthe, Bora
+- Report, repository, misc: Bora, Malthe, Dominik
 
 # Appendix
 
