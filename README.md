@@ -6,19 +6,19 @@ The project explores a typology-aware multilingual machine translation approach 
 
 ## Contributions
 
-This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata and documented information - script type, language family, and region - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings built on SMOL dataset and documentation and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
+This project introduces a typology-aware multilingual translation approach that uses only SMOL’s internal metadata and documented information - script type, language family, and basic linguistic statistics - to improve low-resource translation. The novelty lies in creating data-driven typology embeddings built on SMOL dataset and documentation and integrating them into the mBART-50 model’s language-ID representations. This method enables the model to adapt to each language’s structural traits without external databases, offering a reproducible way to enhance cross-lingual transfer in multilingual MT.
 
 ## Methods
 
 The initial work on the project was a review of the SMOL dataset and its published paper to understand the construction, language coverage, and the make-up of its metadata. This review was followed by a screening of related research using SMOL, identifying preprocessing strategies that were commonly employed and current limitations in low-resource multilingual translation. This review of the academic landscape gave us intuitions on how we intend to structure and make use of SMOL’s metadata fields, such as script type from the ISO 15924 column, continent-based family indicators, and Glottocodes.
 
-An exploratory data analysis will assist us in characterizing SMOL’s linguistic and structural diversity. From this we derived languages which had enough data in documents and sentences, while ensuring diversity in family and region. By doing this we initialy decided on a set of 18 languages, however after further consideration we narrowed it down to 15.
+An exploratory data analysis assisted us in characterizing SMOL’s linguistic and structural diversity. From this we derived languages which had enough data in documents and sentences, while ensuring diversity in family and region. By doing this we initially decided on a set of 18 languages, however after further consideration we narrowed it down to 15.
 
-Next, the data preprocessing step will ensure consistency and allow for seamless model integration. This step includes the cleaning and the normalization of text, applying mBART’s SentencePiece model for subword tokenization, and encoding each language with its proposed metadata fields. For each language, a typology embedding will be constructed by concatenating a one-hot encoding of script type, an embedding of family/region which will be learned, and the continuous morphological indicators. These embeddings will be combined with mBART-50’s existing vectors, allowing for the model to consider both structural and typological information in machine translation.
+Next, the data preprocessing step ensured consistency and allow for seamless model integration. This step includes the cleaning and the normalization of text, applying mBART-50’s SentencePiece model for subword tokenization, and encoding each language with its proposed metadata fields. For each language, a typology embedding were constructed by concatenating a one-hot encoding of script type, an embedding of family/region which will be learned, and the continuous morphological indicators. These embeddings will be combined with mBART-50’s existing vectors, allowing for the model to consider both structural and typological information in machine translation.
 
-Fine-tuning will be conducted on SMOL’s multilingual parallel data using mBART-50 as the base model. The training objective will mirror standard sequence-to-sequence translation fine-tuning. However, the difference will be at both encoder and decoder stages, where the introduction of typology-enhanced embeddings will serve as auxiliary inputs. Experiments will compare baseline mBART-50 performance with and without typology embeddings to observe their contribution.
+Fine-tuning conducteded on SMOL’s multilingual parallel data using mBART-50 as the base model. The training objective mirrored standard sequence-to-sequence translation fine-tuning. However, the difference was at both encoder and decoder stages, where the introduction of typology-enhanced embeddings served as auxiliary inputs. Experiments compared baseline mBART-50 performance with and without typology embeddings to observe their contribution.
 
-In the evaluation step, metrics such as chrF and BLEU will be utilised to assess translation quality across multiple low-resource directions. We will conduct both aggregate and per-language analyses to measure improvements and understand which typological factors help the model learn better connections between languages.
+In the evaluation step, metrics such as chrF and BLEU were utilized to assess translation quality across multiple low-resource directions. We conducted both aggregate and per-language analyses to measure improvements and understand which typological factors help the model learn better connections between languages.
 
 ## Proposed timeline
 
@@ -43,6 +43,7 @@ Finally we will spend the last two weeks analyzing our results and writing the r
 We want to ensure that every member of the team has a hand in most areas, so that we get the most out of the course. However, to ensure that everything goes according to our rough timeline, we each hold responsibility to certain areas of work.
 
 - Literature research: Bora
+- Chosing languages and categorizing them: Malthe
 - Preparing the per language metadata: Dominik
 - Creating typology aware model: Dominik
 - Creating the fine-tuning loop: Malthe, Bora
